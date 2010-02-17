@@ -1,4 +1,4 @@
-(ns native-deps.native-deps
+(ns leiningen.native-deps
   (:require [lancet])
   (:use [leiningen.pom :only [default-repos]]
         [leiningen.deps :only [make-repository make-dependency]]
