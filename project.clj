@@ -1,4 +1,4 @@
 (defproject native-deps "1.0.0-SNAPSHOT"
-  :description "FIXME: write"
-  :dependencies [[org.clojure/clojure "1.1.0"]
-                 [org.clojure/clojure-contrib "1.1.0"]])
+  :description "Native dependencies plugin for Leiningen"
+  :dependencies [[org.apache.maven/maven-ant-tasks "2.0.10"]]
+  :dev-dependencies [[lein-clojars "0.5.0-SNAPSHOT"]])
