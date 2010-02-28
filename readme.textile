@@ -1,4 +1,4 @@
-h2. Usage
+h1. Usage
 
 In order for native-deps to do the right thing you need to make sure to package your jar properly. Create a folder called *native* for the native libraries. Also create folder *lib* for any normal jars that your dependency uses. For example the LWJGL 2.2.2 library was packaged for Leiningen like so:
 
