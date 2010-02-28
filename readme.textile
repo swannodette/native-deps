@@ -42,3 +42,5 @@ You should then create your jar with the following command:
 <pre class="console">
 jar -cMf foo.jar native lib
 </pre>
+
+Your jar is ready to push to Clojars. You can read more about that process here:"http://wiki.github.com/ato/clojars-web/tutorial"
