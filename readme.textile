@@ -1,0 +1,42 @@
+h2. Usage
+
+In order for native-deps to do the right thing you need to make sure to package your jar properly. Create a folder called *native* for the native libraries. Also create folder *lib* for any normal jars that your dependency uses. For example the LWJGL 2.2.2 library was packaged for Leiningen like so:
+
+/lib
+/lib/*.jar
+
+/native/
+/native/macosx/x86/*.dynlib
+/native/macosx/x86_64/*.dynlib
+/native/windows/x86/*.dll
+/native/windows/x86_64/*.dll
+/native/linux/x86/*.so
+/native/linux/x86_64/*.so
+/native/solaris/x86/*.so
+/native/solaris/x86_64/*.so
+
+The naming convention is important.
+
+<pre>
+Platforms:
+---------------------
+Mac OS X -> macosx
+Windows  -> windows
+Linux    -> linux
+SunOS"   -> solaris
+
+Architectures
+--------------------
+amd64    -> x86_64
+x86_64   -> x86_64
+x86      -> x86
+i386     -> x86
+arm      -> arm
+sparc    -> sparc
+</pre>
+
+You should then create your jar with the following command:
+
+<pre class="console">
+jar -cMf foo.jar native lib
+</pre>
