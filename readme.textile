@@ -2,6 +2,7 @@ h2. Usage
 
 In order for native-deps to do the right thing you need to make sure to package your jar properly. Create a folder called *native* for the native libraries. Also create folder *lib* for any normal jars that your dependency uses. For example the LWJGL 2.2.2 library was packaged for Leiningen like so:
 
+<pre>
 /lib
 /lib/*.jar
 
@@ -14,6 +15,7 @@ In order for native-deps to do the right thing you need to make sure to package 
 /native/linux/x86_64/*.so
 /native/solaris/x86/*.so
 /native/solaris/x86_64/*.so
+</pre>
 
 The naming convention is important.
 
