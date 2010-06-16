@@ -1,7 +1,7 @@
 (ns leiningen.native-deps
   (:require [lancet])
-  (:use [leiningen.pom :only [default-repos]]
-        [leiningen.deps :only [make-repository make-dependency]]
+  (:use [leiningen.pom :only [default-repos make-dependency]]
+        [leiningen.deps :only [make-repository]]
         [clojure.contrib.java-utils :only [file]])
   (:import [org.apache.maven.artifact.ant DependenciesTask]))
 
