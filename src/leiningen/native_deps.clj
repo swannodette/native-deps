@@ -19,5 +19,5 @@
     (doseq [dep (:native-dependencies project)]
       (.addDependency deps-task (make-dependency dep)))
     (.execute deps-task)
-    (lancet/unjar {:dest ""} (.getReference lancet/ant-project
-                                            (.getFilesetId deps-task)))))
+    (lancet/unjar {:dest (:root project)} (.getReference lancet/ant-project
+                                                         (.getFilesetId deps-task)))))
