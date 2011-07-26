@@ -1,5 +1,5 @@
 (ns leiningen.native-deps
-  (:require [lancet])
+  (:require [lancet.core :as lancet])
   (:use [leiningen.core :only [default-repos]]
         [leiningen.util.maven :only [make-dependency]]
         [leiningen.deps :only [make-repository]]
