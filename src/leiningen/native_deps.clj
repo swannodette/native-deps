@@ -2,7 +2,7 @@
   (:require [lancet.core :as lancet])
   (:use [leiningen.core :only [default-repos]]
         [leiningen.util.maven :only [make-dependency]]
-        [leiningen.deps :only [make-repository]]
+        [leiningen.deps :only [make-repositories]]
         [clojure.contrib.java-utils :only [file]])
   (:import [org.apache.maven.artifact.ant DependenciesTask]))
 
@@ -13,8 +13,7 @@
       (.setFilesetId "native-dependency.fileset")
       (.setProject lancet/ant-project)
       (.setPathId (:name project)))
-    (doseq [r (map make-repository (concat default-repos
-                                           (:repositories project)))]
+    (doseq [r (make-repositories project)]
       (.addConfiguredRemoteRepository deps-task r))
     (doseq [dep (:native-dependencies project)]
       (.addDependency deps-task (make-dependency dep)))
